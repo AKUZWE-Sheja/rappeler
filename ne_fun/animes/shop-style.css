@@ -1,44 +1,81 @@
-header{
-    padding: 10px 20px;
+header {
+    padding: 20px;
     border-bottom: 1px solid #eee;
     background: #fff;
-  }
-  header:after{
-    display: block;
-    content: "";
-    clear: both;
-  }
-  .basket ul{
-    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.basket header h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #333;
+}
+
+.basket header .basket-icon img {
+    width: 40px;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     margin-top: 40px;
-  }
-  .basket li{
-    display: inline-block;
+    padding: 0;
+}
+
+.products li {
     list-style-type: none;
-    width: 30%;
-    margin: 30px 1.5%;
+    width: 200px;
+    margin: 20px;
     text-align: center;
-  }
-  .basket button{
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    background: #f9f9f9;
+    transition: transform 0.3s ease;
+}
+
+.products li:hover {
+    transform: scale(1.05);
+}
+
+.products img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.products h2 {
+    font-size: 1.2em;
+    color: #555;
+    margin: 10px 0;
+}
+
+.basket button {
+    border: none;
+    padding: 10px 20px;
+    background: #28a745;
+    color: #fff;
     border-radius: 10px;
     cursor: pointer;
-  }
-  .basket header div{
-    float: right;
-    position: relative;
-    z-index: 1;
-  }
-  .basket header h1{
-    float: left;
-  }
-  .zoom {
+    transition: background 0.3s ease;
+}
+
+.basket button:hover {
+    background: #218838;
+}
+
+.zoom {
     position: absolute;
     top: 40px;
     right: 50%;
     width: 40px;
     opacity: 0;
     animation: zoom 1s ease forwards;
-  }
+}
+
 @keyframes zoom {
     0% {opacity: 0;}
     50% {opacity: 1;}
