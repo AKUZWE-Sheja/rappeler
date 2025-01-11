@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darky</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        main {
+            margin: 5vh 15%;
+        }
+        h1 {
+            font-size: 40px;
+            font-weight: 400;
+            text-align: center;
+        }
+        img {
+            height: auto;
+            width: 50%;
+        }
+        p {
+            text-align: justify;
+            font-size: 18px;
+        }
+        label {
+            position: absolute;
+            height: 22px;
+            width: 45px;
+            right: 20px;
+            top: 20px;
+            border: 2px solid;
+            border-radius: 20px;
+        }
+        label:before {
+            position: absolute;
+            height: 20px;
+            width: 20px;
+            left: 1px;
+            top: 1px;
+            content: "";
+            border-radius: 50%;
+            background-color: black;
+            cursor: pointer;
+            transition: 0.4s;
+        }
+        label.active:before {
+            left: 24px;
+            background: #fff;
+        }
+        body.night {
+            background: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <label id="dark-mode"></label>
+    </header>
+    <main>
+        <h1>Darky</h1>
+        <div id="resp">
+            <img src="../assets/girls.jpeg" />
+            <p>Dark mode is a feature that changes the color scheme of an application or website from light to dark. It's a popular option for those who prefer a less bright and more subdued interface. With dark mode, the background is typically black or dark gray, and the text and icons are white or light.</p>
+        </div>
+    </main>
+    <script>
+        var content = document.getElementsByTagName('body')[0];
+        var darkMode = document.getElementById('dark-mode');
+        darkMode.addEventListener('click', function() {
+            darkMode.classList.toggle('active');
+            content.classList.toggle('night');
+        })
+    </script>
+</body>
+</html>
